@@ -13,53 +13,69 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <img src="images/logo.svg" alt="splitter" />
+    <img src="images/logo.svg" alt="splitter" id="heading" />
     <main>
       <form>
-        <h2>Bill</h2>
-        <div class="numberinput">
-          <input type="number" id="bill" name="bill" />
-          <label for="bill"
-            ><img src="images/icon-dollar.svg" alt="dollar" />0
-          </label>
+        <div class="inputfield">
+          <h2>Bill</h2>
+          <div class="numberinput">
+            <input type="number" id="bill" name="bill" class="num" placeholder=" "/>
+            <div class="numberlabel">
+              <img src="images/icon-dollar.svg" alt="dollar" />
+              <label for="bill">0</label>
+            </div>
+          </div>
         </div>
-        <h2>Select Tip %</h2>
-        <label for="five">
-          <input type="radio" id="five" name="tip" value="5" />5%
-        </label>
-        <label for="ten">
-          <input type="radio" id="ten" name="tip" value="10" />10%
-        </label>
-        <label for="fifteen">
-          <input type="radio" id="fifteen" name="tip" value="15" />15%
-        </label>
-        <label for="twentyfive">
-          <input type="radio" id="twentyfive" name="tip" value="25" />25%
-        </label>
-        <label for="fifty">
-          <input type="radio" id="fifty" name="tip" value="50" />50%
-        </label>
-        <label for="custom">
-          <input type="radio" id="custom" name="tip" value="custom" />Custom
-        </label>
-        <h2>Number of People</h2>
-        <div class="numberinput">
-          <input type="number" id="nop" name="nop" />
-          <label for="nop"
-            ><img src="images/icon-person.svg" alt="person" />0
-          </label>
+        <div class="inputfield">
+          <h2>Select Tip %</h2>
+          <div class="optionblock">
+            <div >
+              <input type="radio" id="five" name="tip" value="5" />
+              <label for="five" class="option">5%</label>
+            </div>
+            <div >
+              <input type="radio" id="ten" name="tip" value="10" />
+              <label for="ten" class="option">10%</label>
+            </div>
+            <div >
+              <input type="radio" id="fifteen" name="tip" value="15" />
+              <label for="fifteen" class="option">15%</label>
+            </div>
+            <div >
+              <input type="radio" id="twentyfive" name="tip" value="25" />
+              <label for="twentyfive" class="option">25%</label>
+            </div>
+            <div >
+              <input type="radio" id="fifty" name="tip" value="50" />
+              <label for="fifty" class="option">50%</label>
+            </div>
+            <div class="customradio">
+              <input type="number" id="custom" name="tip" value="custom" class="num" placeholder=" " />
+              <label for="custom" class="option">Custom</label>
+            </div>
+          </div>
+        </div>
+        <div class="inputfield">
+          <h2>Number of People</h2>
+          <div class="numberinput">
+            <input type="number" id="nop" name="nop" class="num" placeholder=" "/>
+            <div class="numberlabel">
+              <img src="images/icon-person.svg" alt="person" />
+              <label for="nop">0</label>
+            </div>
+          </div>
         </div>
       </form>
-      <div>
-        <div>
+      <div class="result">
+        <div class="total">
           <h2>Tip Amount<span>/ person</span></h2>
-          <img src="images/icon-dollar.svg" alt="dollar" />
-          <p id="tipAmount"></p>
+          <p id="tipAmount">
+            $32.79</p>
         </div>
-        <div>
-          <h2>Total<span> / person</span></h2>
-          <img src="images/icon-dollar.svg" alt="dollar" />
-          <p id="Total"></p>
+        <div class="total">
+          <h2>Total<span>/ person</span></h2>
+          <p id="Total">$4.27
+          </p>
         </div>
         <button>Reset</button>
       </div>
