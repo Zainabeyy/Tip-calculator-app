@@ -98,7 +98,7 @@ input[type="radio"] {
   gap: 1rem;
 }
 .optionblock div{
-  width: 9.35rem;
+  width: 47.5%;
 }
 .customradio{
   position: relative;
@@ -178,4 +178,34 @@ input[type="number"]:not(:placeholder-shown).num:not(:focus) ~ label,
 input[type="number"]:focus ~ label{
   opacity: 0;        
   pointer-events: none;  
+}
+
+@media only screen and (min-width:540px){
+  body{
+    padding:0rem 2rem;
+  }
+  .optionblock div{
+    width: 30%;
+  }
+}
+@media only screen and (min-width:950px){
+  body{
+    padding: 4rem 2rem;
+  }
+  main{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    max-width: 1000px;
+  }
+  .result{
+    width: 60%;
+  }
+  button{
+    margin-top: 4rem;
+  }
+  .result div{
+    margin-bottom:3rem ;
+  }
 }
