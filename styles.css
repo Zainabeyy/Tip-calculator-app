@@ -158,6 +158,14 @@ button {
   color: var(--greenishcyan);
   text-decoration: none;
 }
+.error{
+  color:#c40505e7;
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: 500;
+  float: right;
+  display: none;
+}
 
 /* pseudo classes */
 
@@ -190,7 +198,7 @@ input[type="number"]:focus ~ label{
 }
 @media only screen and (min-width:950px){
   body{
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem;
   }
   main{
     margin: auto;
