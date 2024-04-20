@@ -179,6 +179,7 @@ input[type="number"]:is(:active,:focus){
 }
 button:hover{
   background-color: var(--bluishcyan);
+  cursor: pointer;
 }
 input[type="number"]:focus ~ div label,
 input[type="number"]:not(:placeholder-shown).num:not(:focus) ~ div label,
