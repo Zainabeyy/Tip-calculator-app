@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
 }
-/* hsl(184, 14%, 56%) */
+
 :root {
   --Strongcyan: hsl(172, 67%, 45%);
   --greenishcyan: hsl(183, 100%, 15%);
@@ -28,10 +28,12 @@ main {
   padding: 1.8rem;
   border-radius: 1.5rem;
 }
-h2 {
+label.labelInput, legend {
   color: var(--Darkgrayishcyan);
   font-size: 1rem;
+  font-weight:bold;
   margin: 0.5rem 0rem;
+  display: block;
 }
 #heading {
   width: 5.5rem;
@@ -59,26 +61,21 @@ input[type="number"] {
   top: 0;
   width: 100%;
 }
-.numberlabel label {
-  width: 80%;
-  text-align: right;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--Grayishcyan);
-  position: absolute;
-  right: 0.9rem;
-  top: 0.4rem;
-}
 .numberlabel img {
   position: absolute;
   left: 0.9rem;
   top: 1rem;
 }
+fieldset{
+  border: none;
+  min-width: 0;
+}
 .inputfield {
   margin: 0 0 2rem 0;
 }
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 .option {
   background-color: var(--greenishcyan);
@@ -97,14 +94,18 @@ input[type="radio"] {
   flex-flow: row wrap;
   gap: 1rem;
 }
-.optionblock div{
-  width: 47.5%;
+.optionblock div {
+  flex: 1; 
+  min-width: calc(50% - 0.5rem);
 }
 .customradio{
   position: relative;
 }
 .customradio input{
   background-color: var(--whitishcyan);
+}
+input#custom::placeholder{
+  text-align: center;
 }
 label[for="custom"] {
   position: absolute;
@@ -161,7 +162,7 @@ button {
 .error{
   color:#c40505e7;
   text-align: right;
-  font-size: 1.1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   float: right;
   display: none;
@@ -174,6 +175,10 @@ input[type="radio"]:checked ~ label {
   color: var(--greenishcyan);
   cursor: pointer;
 }
+input[type="radio"]:focus ~ label {
+  outline:2px solid var(--Strongcyan) ;
+  outline-offset: 2px;
+}
 input[type="number"]:is(:active,:focus){
   outline-color:var(--Strongcyan) ;
 }
@@ -181,20 +186,13 @@ button:hover{
   background-color: var(--bluishcyan);
   cursor: pointer;
 }
-input[type="number"]:focus ~ div label,
-input[type="number"]:not(:placeholder-shown).num:not(:focus) ~ div label,
-input[type="number"]:not(:placeholder-shown).num:not(:focus) ~ label,
-input[type="number"]:focus ~ label{
-  opacity: 0;        
-  pointer-events: none;  
-}
 
 @media only screen and (min-width:540px){
   body{
     padding:0rem 2rem;
   }
   .optionblock div{
-    width: 30%;
+    min-width: calc(33.33% - 0.67rem);
   }
 }
 @media only screen and (min-width:950px){

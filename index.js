@@ -14,7 +14,7 @@ function getTipValue() {
   for (const tip of tips) {
     if (tip.checked && custom.value == "") {
       tipValue = tip.value;
-      break; // Exit the loop once a selected radio is found
+      break; 
     } else if (tip.checked && custom.value != "") {
       tip.checked = tip.false;
       tipValue = custom.value;
@@ -22,7 +22,6 @@ function getTipValue() {
       tipValue = custom.value;
     }
   }
-  console.log("Selected tip value:", tipValue);
 }
 function getTipAmount() {
   tips.forEach((tip) => tip.addEventListener("change", getTipValue));

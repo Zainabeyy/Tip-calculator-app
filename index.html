@@ -18,24 +18,23 @@
     <main>
       <form>
         <div class="inputfield">
-          <h2>Bill<span class="error" id="error1">Can't be zero</span></h2>
+          <label class="labelInput">Bill<span class="error" id="error1">Can't be zero</span></label>
           <div class="numberinput">
             <input
               type="number"
               id="bill"
               name="bill"
               class="num"
-              placeholder=" "
+              placeholder="0"
             />
             <div class="numberlabel">
               <img src="images/icon-dollar.svg" alt="dollar" />
-              <label for="bill">0</label>
             </div>
           </div>
         </div>
         <div class="inputfield">
-          <h2>Select Tip %</h2>
-          <div class="optionblock" >
+          <fieldset class="optionblock">
+            <legend>Select Tip %</legend>
             <div>
               <input type="radio" id="five" name="tip" value="5" />
               <label for="five" class="option">5%</label>
@@ -62,26 +61,24 @@
                 id="custom"
                 name="tip"
                 class="num"
-                placeholder=" "
+                placeholder="Custom"
               />
-              <label for="custom" class="option">Custom</label>
             </div>
-          </div>
+          </fieldset>
         </div>
         <div class="inputfield">
-          <h2>Number of People<span class="error" id="error2">Can't be zero</span></h2>
+          <label class="labelInput">Number of People<span class="error" id="error2">Can't be zero</span></label>
           <div class="numberinput">
             <input
               type="number"
               id="nop"
               name="nop"
               class="num"
-              placeholder=" "
+              placeholder="0"
               onblur="calculator()"
             />
             <div class="numberlabel">
               <img src="images/icon-person.svg" alt="person" />
-              <label for="nop">0</label>
             </div>
           </div>
         </div>
@@ -89,11 +86,11 @@
       <div class="result">
         <div class="total">
           <h2>Tip Amount<span>/ person</span></h2>
-          <p>$<span id="tipAmount">0</span></p>
+          <p aria-live="polite" role="alert" aria-atomic="true" tabindex="0">$<span id="tipAmount">0</span></p>
         </div>
         <div class="total">
           <h2>Total<span>/ person</span></h2>
-          <p >$<span id="Total">0</span></p>
+          <p aria-live="polite" aria-atomic="true" tabindex="0">$<span id="Total">0</span></p>
         </div>
         <button>Reset</button>
       </div>
